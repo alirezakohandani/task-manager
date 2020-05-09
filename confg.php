@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 define("DB_HOST", '127.0.0.1');
 define("DB_NAME", 'task_manager');
@@ -28,6 +30,7 @@ $sql = "SELECT * FROM task $where";
 $result = $db->query($sql);
 
 $tasks = $result->fetch_all(MYSQLI_ASSOC);
+
 
 
 
